@@ -18,14 +18,14 @@
   <label>Librewolf</label>
   <description>Web browser</description>
   <running type="exe" os="unix">waterfox</running>
-  <running type="exe" os="unix">waterfox-bin</running>
-  <running type="exe" os="windows">waterfox.exe</running>
+  <running type="exe" os="unix">librewolf-bin</running>
+  <running type="exe" os="windows">librewolf.exe</running>
   <running type="pathname">~/.librewolf/*.default/lock</running>
   <var name="base">
-    <value os="windows">%AppData%\Mozilla\Waterfox</value>
-    <value os="linux">~/.mozilla/waterfox</value>
-    <value os="freebsd">~/.mozilla/waterfox</value>
-    <value os="openbsd">~/.mozilla/waterfox</value>
+    <value os="windows">%AppData%\Librewolf\</value>
+    <value os="linux">~/.librewolf/</value>
+    <value os="freebsd">~/.librewolf/</value>
+    <value os="openbsd">~/.librewolf</value>
   </var>
   <var name="profile">
     <value search="glob" os="windows">%AppData%\Librewolf\Profiles\*</value>
@@ -46,7 +46,7 @@
 This Linux path is whitelisted under the System - Cache cleaner, so it is not
 redundant. Also, this Linux path contains the cache2 and OfflineCache directories.
 -->
-    <action command="delete" search="walk.all" path="~/.cache/mozilla/"/>
+    <action command="delete" search="walk.all" path="~/.cache/librewolf/"/>
     <action command="delete" search="walk.all" path="%LocalAppData%\Librewolf\Profiles\*\cache2"/>
     <action command="delete" search="walk.all" path="%LocalAppData%\Librewolf\Profiles\*\jumpListCache"/>
     <action command="delete" search="walk.all" path="%LocalAppData%\Librewolf\Profiles\*\OfflineCache"/>
